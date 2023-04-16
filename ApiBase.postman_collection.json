@@ -1,0 +1,504 @@
+{
+	"info": {
+		"_postman_id": "be682f26-de74-452d-b9de-82e6bb94d795",
+		"name": "ApiBase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7381548"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mustafa1390@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify_email",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mustafa1390@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "icF89vlbBl7TJjOHIf0j6xApOkYK1R",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/verify_email",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"verify_email"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "final_register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjliMjM4YTE4ZTNjZWM2NjI5NWNhY2E0ZmNmOWQxMDQ2NTFlYTgzMzZkNmFiNWU5YzNkNGM4YjM3ZmNiMzI1ZTZmZGFjMTA3ZDYyZDY0ODUiLCJpYXQiOjE2ODE2NDE1ODMuMjcxMTM0LCJuYmYiOjE2ODE2NDE1ODMuMjcxMTUsImV4cCI6MTcxMzI2Mzk4My4yNjAzNzMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.ceR_PVTcS6YmccdljWevjftpjT_f-M_3xhw2znzuqZrYbYiuvQVeWzGdD9QkUVVOzLUVvbdX4eqLxUVysOTcCUkjGdaIzrCkUBAuTHcc1etA4xUnTGAZmsKFfzGqAPSDS79cPTcmzex83pr8xFC20Ht2MBwsTKXeZ9ulA7jOhy0m_vnnLt1J_yidmxhM6gVzlHAv-tCGRXTco_A1d8DdjunvdixtXS5WIxaFAz66wBEf0Av-bw6eyMs5UPQnoxHBi0GzxpZrIolf5HTKoumsvjzMhGVMJ4JB5GXZFzAOBUbe2S5C2aF-sZdX9mhP7r1zSESkhPyzkp0rAN8128R80IoTLBKZEKopyyKPDF2M7KAgVJ93e_Hf3PPpmRrm1i59Kyg9NOxt9lqDRDaAXHPZ1LhajQEjEqReGktgq23hBEZ_iXGtIvJgjYmzgmNbOUdAYveAIMuWws1zOBpRnQXbsxRMI0zVvfldjhshIT-FhQk8rKlzpMMiGB8vVeqwFK5dcvZ7JBC9cJncyG11DSQeKnRwkRJytz9hGD7kfo0b3c4f-vxzJiKlwsYer988dCtpAQxFmoWGKr6MeM__hoIKWXOGS0uaiIac8r-1YroT3bjG5WrSiKahSdeyBzRrHsX5RTrQ5U7I1CaCbPWJVX3XK-3lNeUdvOJ8lOhq1b1l1gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mustafa1390@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "mostafayosef",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "put",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/final_register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"final_register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mustafa1390@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remember",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mustafa1390@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/remember",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"remember"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "confirm_password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mustafa1390@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "remember_password",
+							"value": "gqL8QlOgF",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "put",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/confirm_password",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"confirm_password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_index",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjliMjM4YTE4ZTNjZWM2NjI5NWNhY2E0ZmNmOWQxMDQ2NTFlYTgzMzZkNmFiNWU5YzNkNGM4YjM3ZmNiMzI1ZTZmZGFjMTA3ZDYyZDY0ODUiLCJpYXQiOjE2ODE2NDE1ODMuMjcxMTM0LCJuYmYiOjE2ODE2NDE1ODMuMjcxMTUsImV4cCI6MTcxMzI2Mzk4My4yNjAzNzMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.ceR_PVTcS6YmccdljWevjftpjT_f-M_3xhw2znzuqZrYbYiuvQVeWzGdD9QkUVVOzLUVvbdX4eqLxUVysOTcCUkjGdaIzrCkUBAuTHcc1etA4xUnTGAZmsKFfzGqAPSDS79cPTcmzex83pr8xFC20Ht2MBwsTKXeZ9ulA7jOhy0m_vnnLt1J_yidmxhM6gVzlHAv-tCGRXTco_A1d8DdjunvdixtXS5WIxaFAz66wBEf0Av-bw6eyMs5UPQnoxHBi0GzxpZrIolf5HTKoumsvjzMhGVMJ4JB5GXZFzAOBUbe2S5C2aF-sZdX9mhP7r1zSESkhPyzkp0rAN8128R80IoTLBKZEKopyyKPDF2M7KAgVJ93e_Hf3PPpmRrm1i59Kyg9NOxt9lqDRDaAXHPZ1LhajQEjEqReGktgq23hBEZ_iXGtIvJgjYmzgmNbOUdAYveAIMuWws1zOBpRnQXbsxRMI0zVvfldjhshIT-FhQk8rKlzpMMiGB8vVeqwFK5dcvZ7JBC9cJncyG11DSQeKnRwkRJytz9hGD7kfo0b3c4f-vxzJiKlwsYer988dCtpAQxFmoWGKr6MeM__hoIKWXOGS0uaiIac8r-1YroT3bjG5WrSiKahSdeyBzRrHsX5RTrQ5U7I1CaCbPWJVX3XK-3lNeUdvOJ8lOhq1b1l1gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mustafa1390@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "mostafayosef",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "put",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/post/index",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post",
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_store",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjliMjM4YTE4ZTNjZWM2NjI5NWNhY2E0ZmNmOWQxMDQ2NTFlYTgzMzZkNmFiNWU5YzNkNGM4YjM3ZmNiMzI1ZTZmZGFjMTA3ZDYyZDY0ODUiLCJpYXQiOjE2ODE2NDE1ODMuMjcxMTM0LCJuYmYiOjE2ODE2NDE1ODMuMjcxMTUsImV4cCI6MTcxMzI2Mzk4My4yNjAzNzMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.ceR_PVTcS6YmccdljWevjftpjT_f-M_3xhw2znzuqZrYbYiuvQVeWzGdD9QkUVVOzLUVvbdX4eqLxUVysOTcCUkjGdaIzrCkUBAuTHcc1etA4xUnTGAZmsKFfzGqAPSDS79cPTcmzex83pr8xFC20Ht2MBwsTKXeZ9ulA7jOhy0m_vnnLt1J_yidmxhM6gVzlHAv-tCGRXTco_A1d8DdjunvdixtXS5WIxaFAz66wBEf0Av-bw6eyMs5UPQnoxHBi0GzxpZrIolf5HTKoumsvjzMhGVMJ4JB5GXZFzAOBUbe2S5C2aF-sZdX9mhP7r1zSESkhPyzkp0rAN8128R80IoTLBKZEKopyyKPDF2M7KAgVJ93e_Hf3PPpmRrm1i59Kyg9NOxt9lqDRDaAXHPZ1LhajQEjEqReGktgq23hBEZ_iXGtIvJgjYmzgmNbOUdAYveAIMuWws1zOBpRnQXbsxRMI0zVvfldjhshIT-FhQk8rKlzpMMiGB8vVeqwFK5dcvZ7JBC9cJncyG11DSQeKnRwkRJytz9hGD7kfo0b3c4f-vxzJiKlwsYer988dCtpAQxFmoWGKr6MeM__hoIKWXOGS0uaiIac8r-1YroT3bjG5WrSiKahSdeyBzRrHsX5RTrQ5U7I1CaCbPWJVX3XK-3lNeUdvOJ8lOhq1b1l1gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mustafa1390@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "mostafayosef",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "put",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/final_register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"final_register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjliMjM4YTE4ZTNjZWM2NjI5NWNhY2E0ZmNmOWQxMDQ2NTFlYTgzMzZkNmFiNWU5YzNkNGM4YjM3ZmNiMzI1ZTZmZGFjMTA3ZDYyZDY0ODUiLCJpYXQiOjE2ODE2NDE1ODMuMjcxMTM0LCJuYmYiOjE2ODE2NDE1ODMuMjcxMTUsImV4cCI6MTcxMzI2Mzk4My4yNjAzNzMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.ceR_PVTcS6YmccdljWevjftpjT_f-M_3xhw2znzuqZrYbYiuvQVeWzGdD9QkUVVOzLUVvbdX4eqLxUVysOTcCUkjGdaIzrCkUBAuTHcc1etA4xUnTGAZmsKFfzGqAPSDS79cPTcmzex83pr8xFC20Ht2MBwsTKXeZ9ulA7jOhy0m_vnnLt1J_yidmxhM6gVzlHAv-tCGRXTco_A1d8DdjunvdixtXS5WIxaFAz66wBEf0Av-bw6eyMs5UPQnoxHBi0GzxpZrIolf5HTKoumsvjzMhGVMJ4JB5GXZFzAOBUbe2S5C2aF-sZdX9mhP7r1zSESkhPyzkp0rAN8128R80IoTLBKZEKopyyKPDF2M7KAgVJ93e_Hf3PPpmRrm1i59Kyg9NOxt9lqDRDaAXHPZ1LhajQEjEqReGktgq23hBEZ_iXGtIvJgjYmzgmNbOUdAYveAIMuWws1zOBpRnQXbsxRMI0zVvfldjhshIT-FhQk8rKlzpMMiGB8vVeqwFK5dcvZ7JBC9cJncyG11DSQeKnRwkRJytz9hGD7kfo0b3c4f-vxzJiKlwsYer988dCtpAQxFmoWGKr6MeM__hoIKWXOGS0uaiIac8r-1YroT3bjG5WrSiKahSdeyBzRrHsX5RTrQ5U7I1CaCbPWJVX3XK-3lNeUdvOJ8lOhq1b1l1gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "edit_titl1",
+							"type": "text"
+						},
+						{
+							"key": "text",
+							"value": "edit_text2",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "put",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/post/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post_destroy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiYjliMjM4YTE4ZTNjZWM2NjI5NWNhY2E0ZmNmOWQxMDQ2NTFlYTgzMzZkNmFiNWU5YzNkNGM4YjM3ZmNiMzI1ZTZmZGFjMTA3ZDYyZDY0ODUiLCJpYXQiOjE2ODE2NDE1ODMuMjcxMTM0LCJuYmYiOjE2ODE2NDE1ODMuMjcxMTUsImV4cCI6MTcxMzI2Mzk4My4yNjAzNzMsInN1YiI6IjMiLCJzY29wZXMiOltdfQ.ceR_PVTcS6YmccdljWevjftpjT_f-M_3xhw2znzuqZrYbYiuvQVeWzGdD9QkUVVOzLUVvbdX4eqLxUVysOTcCUkjGdaIzrCkUBAuTHcc1etA4xUnTGAZmsKFfzGqAPSDS79cPTcmzex83pr8xFC20Ht2MBwsTKXeZ9ulA7jOhy0m_vnnLt1J_yidmxhM6gVzlHAv-tCGRXTco_A1d8DdjunvdixtXS5WIxaFAz66wBEf0Av-bw6eyMs5UPQnoxHBi0GzxpZrIolf5HTKoumsvjzMhGVMJ4JB5GXZFzAOBUbe2S5C2aF-sZdX9mhP7r1zSESkhPyzkp0rAN8128R80IoTLBKZEKopyyKPDF2M7KAgVJ93e_Hf3PPpmRrm1i59Kyg9NOxt9lqDRDaAXHPZ1LhajQEjEqReGktgq23hBEZ_iXGtIvJgjYmzgmNbOUdAYveAIMuWws1zOBpRnQXbsxRMI0zVvfldjhshIT-FhQk8rKlzpMMiGB8vVeqwFK5dcvZ7JBC9cJncyG11DSQeKnRwkRJytz9hGD7kfo0b3c4f-vxzJiKlwsYer988dCtpAQxFmoWGKr6MeM__hoIKWXOGS0uaiIac8r-1YroT3bjG5WrSiKahSdeyBzRrHsX5RTrQ5U7I1CaCbPWJVX3XK-3lNeUdvOJ8lOhq1b1l1gg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "_method",
+							"value": "delete",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/post/destroy",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"post",
+						"destroy"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
