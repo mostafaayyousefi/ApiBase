@@ -27,10 +27,9 @@ class PassportAuthController extends Controller
                 'email_code' => $email_code,
                 'password' => Hash::make($email_code)
             ]);
-            $token = $user->createToken('LaravelAuthApp')->accessToken;
+
             return response()->json(
-                ['message' => 'success' ,
-                'token' => $token ],  200);
+                ['message' => 'success'   ],  200);
         }
     }
 
@@ -67,10 +66,8 @@ class PassportAuthController extends Controller
         $user = User::where([ ['email',$request->email], ['email_code',$request->code], ])->first();
         if($user){
             $user->update([ 'email_status'=>'active' ]);
-            $token = $user->createToken('LaravelAuthApp')->accessToken;
             return response()->json(
-                ['message' => 'success' ,
-                'token' => $token ],  200);
+                ['message' => 'success' ],  200);
         }else{
             return response()->json(['error' => 'Unauthorisedddddddddddddd'], 401);
         }
@@ -88,11 +85,12 @@ class PassportAuthController extends Controller
         }
         $user = User::where([ ['email',$request->email], ['email_status','=','active'],   ])->first();
         if($user){
-            $user = $user->update([ 'name'=>$request->name , 'password'=> Hash::make($request->password) ]);
+          $user->update([ 'name'=>$request->name , 'password'=> Hash::make($request->password) ]);
+ 
             return response()->json(
                 [
                     'flag' => '1' ,
-                    'message' => 'success' ,
+                    'message' => 'success'
              ],  200);
         }else{
             return response()->json(

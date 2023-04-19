@@ -27,12 +27,12 @@ Route::post('verify_email', [PassportAuthController::class, 'verify_email']);
 Route::post('remember', [PassportAuthController::class, 'remember']);
 Route::put('confirm_password', [PassportAuthController::class, 'confirm_password']);
 
+Route::prefix('user')->group(function () {
+    Route::put('final_register', [PassportAuthController::class, 'final_register']);
+    });
+
 
 Route::middleware('auth:api')->group(function () {
-
-Route::prefix('user')->group(function () {
-Route::put('final_register', [PassportAuthController::class, 'final_register']);
-});
 
 Route::prefix('post')->group(function () {
 Route::post('store', [PostController::class, 'store']);
