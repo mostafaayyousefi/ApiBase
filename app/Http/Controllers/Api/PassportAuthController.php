@@ -29,7 +29,8 @@ class PassportAuthController extends Controller
             ]);
 
             return response()->json(
-                ['message' => 'success'   ],  200);
+                ['message' => 'success' ,
+                 'description' => 'Pre-registration was done successfully' , ],  200);
         }
     }
 
@@ -67,9 +68,11 @@ class PassportAuthController extends Controller
         if($user){
             $user->update([ 'email_status'=>'active' ]);
             return response()->json(
-                ['message' => 'success' ],  200);
+                ['message' => 'success' ,
+                'description' => 'Email verification was done successfully' ],  200);
         }else{
-            return response()->json(['error' => 'Unauthorisedddddddddddddd'], 401);
+            return response()->json(['message' => 'error',
+            'description' => 'Email verification failed'], 401);
         }
     }
 
@@ -86,17 +89,19 @@ class PassportAuthController extends Controller
         $user = User::where([ ['email',$request->email], ['email_status','=','active'],   ])->first();
         if($user){
           $user->update([ 'name'=>$request->name , 'password'=> Hash::make($request->password) ]);
- 
+
             return response()->json(
                 [
                     'flag' => '1' ,
-                    'message' => 'success'
+                    'message' => 'success' ,
+                    'description' => 'The final registration was successful'
              ],  200);
         }else{
             return response()->json(
                 [
                     'flag' => '0' ,
-                    'message' => 'error' ,
+                    'message' => 'error'  ,
+                    'description' => 'The final registration was not done'
              ],  401);
         }
     }
